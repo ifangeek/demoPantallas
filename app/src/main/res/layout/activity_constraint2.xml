@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Constraint2Activity">
+
+    <Button
+        android:id="@+id/btna"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="a"/>
+
+    <Button
+        android:id="@+id/btna2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btna"
+        app:layout_constraintStart_toEndOf="@id/btna"
+        android:text="a"/>
+
+    <Button
+        android:id="@+id/btna3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btna2"
+        app:layout_constraintStart_toEndOf="@id/btna2"
+        android:text="a"/>
+
+    <Button
+        android:id="@+id/btna4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btna3"
+        app:layout_constraintStart_toEndOf="@id/btna3"
+        android:text="a"/>
+
+    <Button
+        android:id="@+id/btna5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btna4"
+        app:layout_constraintEnd_toStartOf="@id/btna4"
+        android:text="a"/>
+
+    <Button
+        android:id="@+id/btna6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btna5"
+        app:layout_constraintEnd_toStartOf="@id/btna5"
+        android:text="a"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btna6"
+        android:text="a"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/tvNameLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diego"
+        android:layout_marginStart="10dp"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvLastNameLinear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="Pacheco"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ivProfileLinear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_launcher_foreground" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvIdLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
