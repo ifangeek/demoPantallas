@@ -3,36 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="4dp"
-    android:weightSum="3">
-
-    <TextView
-        android:id="@+id/tvNameLinear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Diego"
-        android:layout_marginStart="10dp"
-        android:textSize="18sp" />
+    android:padding="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2">
+        android:orientation="horizontal">
 
-
-        <TextView
-            android:id="@+id/tvLastNameLinear"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:text="Pacheco"
-            android:textSize="18sp" />
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvNameLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diego"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvLastNameLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Pacheco"
+                android:textSize="18sp" />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/ivProfileLinear"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/ic_launcher_foreground" />
     </LinearLayout>
@@ -44,6 +50,8 @@
         android:gravity="center"
         android:text="1"
         android:textSize="18sp" />
+
+
 
 
 </LinearLayout>
