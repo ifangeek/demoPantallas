@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:weightSum="2">
 
+
         <TextView
             android:id="@+id/tvLastNameLinear"
             android:layout_width="0dp"

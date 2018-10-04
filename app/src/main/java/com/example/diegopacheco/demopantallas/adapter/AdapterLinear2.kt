@@ -6,34 +6,46 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.example.diegopacheco.demopantallas.R
+import com.example.diegopacheco.demopantallas.model.Model
 import kotlinx.android.synthetic.main.item_profile_linear.view.*
 
 class AdapterLinear2
 constructor(context: Context) : BaseAdapter() {
 
 
-    var mcontext  = context
+    var inflater : LayoutInflater? = LayoutInflater.from(context)
+
 
     var name = listOf("Diego", "Josue", "Alex", "Luis",
-        "Gianfranco", "Aaron")
+            "Gianfranco", "Aaron")
 
     var lastName = listOf("Pacheco", "Rosas", "Caparachin", "Purizaga", "Monzon", "Cordero")
 
     var ids = listOf("1", "2", "3", "4", "5", "6")
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
+
+        var convertViews = convertView
+
+        if (convertViews != null){
+            convertViews = inflater?.inflate(R.layout.item_profile_linear,null)
+            convertViews!!.tvNameLinear.text = name[position]
+            convertViews.tvLastNameLinear.text = lastName[position]
+            convertViews.tvIdLinear.text = ids[position]
+        }
+
+        return convertViews
     }
 
     override fun getItem(position: Int): Any {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return name.get(position)
     }
 
     override fun getItemId(position: Int): Long {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return position.toLong()
     }
 
     override fun getCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+       return  name.size
     }
 }
