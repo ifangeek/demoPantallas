@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:orientation="horizontal">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivCollaborator"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_person_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:roundAsCircle="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/ic_placeholder_user"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Diego Pacheco"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCollaborator" />
+
+    <ImageView
+        android:id="@+id/ivDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_folder_black_24dp"
+        app:layout_constraintEnd_toStartOf="@id/tvNumberDocument"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvNumberDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="122"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivDocument"
+        app:layout_constraintStart_toEndOf="@id/ivDocument"
+        app:layout_constraintEnd_toStartOf="@id/ivLike"
+        app:layout_constraintTop_toTopOf="@id/ivDocument" />
+
+
+    <ImageView
+        android:id="@+id/ivLike"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_folder_black_24dp"
+        app:layout_constraintStart_toEndOf="@id/tvNumberDocument"
+        app:layout_constraintEnd_toStartOf="@id/tvNumberLike"
+        app:layout_constraintTop_toTopOf="@id/ivDocument"/>
+
+    <TextView
+        android:id="@+id/tvNumberLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.2"
+        app:layout_constraintStart_toEndOf="@id/ivLike"
+        app:layout_constraintBottom_toBottomOf="@id/ivDocument"
+        android:textSize="11sp"
+        app:layout_constraintTop_toTopOf="@id/ivDocument"
+        app:layout_constraintEnd_toEndOf="@id/tvName"/>
+
+
+</android.support.constraint.ConstraintLayout>
