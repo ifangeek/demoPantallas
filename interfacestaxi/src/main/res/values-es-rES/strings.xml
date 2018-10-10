@@ -1,10 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">InterfacesTaxi - Default</string>
+    <string name="app_name">InterfacesTaxi - ES</string>
     <string name="tv_email">Correo</string>
     <string name="tv_password">Constraseña</string>
     <string name="btn_signin">INGRESAR</string>
     <string name="btn_signinFB">INGRESAR CON FACEBOOK</string>
     <string name="tv_recovery_password">Recuperar Contraseña</string>
     <string name="tv_register">Regístrate</string>
-    <string name="tv_default_untrans" translatable="false">Oli</string>
 </resources>

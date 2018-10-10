@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UI Taxi - US</string>
+    <string name="tv_email">Email - US</string>
+    <string name="tv_password">Password - US</string>
+    <string name="btn_signin">SIGN IN - US</string>
+    <string name="btn_signinFB">SIGN IN FACEBOOK - US</string>
+    <string name="tv_recovery_password">Recovery Password - US</string>
+    <string name="tv_register">Register - US</string>
+</resources>

@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:visibility="gone"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Constraint L."
@@ -21,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:visibility="gone"
         android:layout_marginStart="16dp"
         android:text="Linear L."
         app:layout_constraintTop_toBottomOf="@id/btnConstraint1" />
@@ -29,6 +31,7 @@
         android:id="@+id/btnRelative1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
@@ -39,6 +42,7 @@
         android:id="@+id/btnConstraint2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:text="Constraint L. 2"
@@ -51,7 +55,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
-        android:text="Constraint L. 3"
+        android:text="RecyclerView - onclick "
         app:layout_constraintTop_toBottomOf="@id/btnConstraint2" />
 
     <Button
@@ -61,14 +65,16 @@
         app:layout_constraintTop_toBottomOf="@id/btnConstraint3"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:text="Linear L. 2"/>
+        android:text="ListView - OnClick"/>
 
     <Button
         android:id="@+id/btnRelative2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:visibility="gone"
         android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLinear2"
         android:text="Relative L. 2" />
 
