@@ -41,6 +41,10 @@ class AdapterRecycler(val context: Context) : RecyclerView.Adapter<RecyclerView.
             Toast.makeText(context, "onClick en recyclerView", Toast.LENGTH_SHORT).show()
         }
 
+        holder.itemView.ivProfile.setOnClickListener {
+            Toast.makeText(context,"onClick en un imageView",Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     class RVConstraintView(itemView: View) : RecyclerView.ViewHolder(itemView)

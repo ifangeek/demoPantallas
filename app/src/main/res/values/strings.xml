@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DemoPantallas</string>
+    <string name="tv_currency">Currency :</string>
 </resources>
