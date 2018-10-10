@@ -5,16 +5,16 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.example.diegopacheco.demopantallas.R
 import kotlinx.android.synthetic.main.item_profile.view.*
 
-class AdapterRecycler(val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), View.OnClickListener {
+class AdapterRecycler(val context: Context, callback: RVCallback) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    override fun onClick(v: View?) {
-        Toast.makeText(v?.context, "evento onclick en un RecyclerView", Toast.LENGTH_SHORT).show()
+    private val mCallback = callback
+
+    interface RVCallback {
+        fun onClick(context: Context)
     }
-
 
     var name = listOf("Diego","Josue","Alex","Luis",
             "Gianfranco","Aaron")
@@ -38,12 +38,15 @@ class AdapterRecycler(val context: Context) : RecyclerView.Adapter<RecyclerView.
         holder.itemView.ivProfile.setImageResource(R.drawable.ic_account_circle_black_24dp)
         holder.itemView.idUser.text = ids[position]
         holder.itemView.setOnClickListener {
+            mCallback.onClick(context)
+        }
+        /*holder.itemView.setOnClickListener {
             Toast.makeText(context, "onClick en recyclerView", Toast.LENGTH_SHORT).show()
         }
 
         holder.itemView.ivProfile.setOnClickListener {
             Toast.makeText(context,"onClick en un imageView",Toast.LENGTH_SHORT).show()
-        }
+        }*/
 
     }
 

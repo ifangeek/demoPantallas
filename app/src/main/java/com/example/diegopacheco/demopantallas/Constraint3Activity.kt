@@ -1,27 +1,29 @@
 package com.example.diegopacheco.demopantallas
 
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.widget.Toast
 import com.example.diegopacheco.demopantallas.adapter.AdapterRecycler
 import kotlinx.android.synthetic.main.activity_constraint3.*
 import java.text.NumberFormat
 import java.util.*
 
-class Constraint3Activity : AppCompatActivity() {
+class Constraint3Activity : AppCompatActivity(), AdapterRecycler.RVCallback {
 
     private lateinit var adapter: AdapterRecycler
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_constraint3)
 
-        adapter = AdapterRecycler(this)
+        adapter = AdapterRecycler(this, this)
         rvProfile.adapter = adapter
 
         val nf = NumberFormat.getCurrencyInstance().currency
-        val number = tvCurrencyNumber.text.toString()
 
         tvCurrencyNumber.text = "${nf.symbol}50"
 
@@ -29,7 +31,7 @@ class Constraint3Activity : AppCompatActivity() {
 
         Locale.getAvailableLocales().filter { it.language.toLowerCase() == "es" }.forEach { Log.d(Constraint3Activity::class.java.name, "Locale -> $it") }
 
-        var locale = Locale("en", "PER")
+        val locale = Locale("en", "PER")
         Log.d(Constraint3Activity::class.java.name, "Locale new -> $locale")
         Log.d(Constraint3Activity::class.java.name, "Currency new -> ${NumberFormat.getCurrencyInstance(locale).currency}")
         Log.d(Constraint3Activity::class.java.name, "Currency new -> ${NumberFormat.getCurrencyInstance(locale).currency.currencyCode}")
@@ -37,5 +39,9 @@ class Constraint3Activity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
             Log.d(Constraint3Activity::class.java.name, "Currency new -> ${NumberFormat.getCurrencyInstance(locale).currency.numericCode}")
 //        Locale.getAvailableLocales().forEach { Log.d(Constraint3Activity::class.java.name, "Locale -> $it, Languague ${it.language}") }
+    }
+
+    override fun onClick(context: Context) {
+        Toast.makeText(context, "onClick en recyclerView", Toast.LENGTH_SHORT).show()
     }
 }
