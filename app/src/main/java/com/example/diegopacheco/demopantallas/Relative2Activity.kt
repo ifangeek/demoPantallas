@@ -9,7 +9,7 @@ import com.example.diegopacheco.demopantallas.adapter.AdapterRecycler
 import kotlinx.android.synthetic.main.activity_constraint3.*
 import kotlinx.android.synthetic.main.activity_relative2.*
 
-class Relative2Activity : AppCompatActivity(),AdapterRecycler.RVCallback {
+class Relative2Activity : AppCompatActivity() {
 
     private lateinit var adapter: AdapterRecycler
 
@@ -17,14 +17,14 @@ class Relative2Activity : AppCompatActivity(),AdapterRecycler.RVCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_relative2)
 
-        adapter = AdapterRecycler(this,this)
+       /* adapter = AdapterRecycler(this)*/
         val layout = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         rvProfile.layoutManager = layout
         rvProfileRecycler.adapter = adapter
 
     }
 
-    override fun onClick(context: Context) {
+/*    override fun onClick(context: Context) {
         Toast.makeText(context, "onClick en recyclerView", Toast.LENGTH_SHORT).show()
-    }
+    }*/
 }

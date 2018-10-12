@@ -1,6 +1,8 @@
 package com.example.diegopacheco.demopantallas.adapter
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,13 +10,14 @@ import android.view.ViewGroup
 import com.example.diegopacheco.demopantallas.R
 import kotlinx.android.synthetic.main.item_profile.view.*
 
-class AdapterRecycler(val context: Context, callback: RVCallback) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class AdapterRecycler(callback:RVCallback) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
-    private val mCallback = callback
-
+    val mCallback = callback
     interface RVCallback {
-        fun onClick(context: Context)
+        fun onClick(texto:String,posicion:Int)
     }
+
+
 
     var name = listOf("Diego","Josue","Alex","Luis",
             "Gianfranco","Aaron")
@@ -33,13 +36,17 @@ class AdapterRecycler(val context: Context, callback: RVCallback) : RecyclerView
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+
+        val nombre = name[position]
         holder.itemView.tvName.text = name[position]
         holder.itemView.tvLastName.text = lastName[position]
-        holder.itemView.ivProfile.setImageResource(R.drawable.ic_account_circle_black_24dp)
         holder.itemView.idUser.text = ids[position]
+        holder.itemView.ivProfile.setImageResource(R.drawable.ic_account_circle_black_24dp)
         holder.itemView.setOnClickListener {
-            mCallback.onClick(context)
+                mCallback.onClick(nombre,position)
         }
+
+
         /*holder.itemView.setOnClickListener {
             Toast.makeText(context, "onClick en recyclerView", Toast.LENGTH_SHORT).show()
         }
