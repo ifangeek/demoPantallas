@@ -7,4 +7,29 @@
     <string name="tv_recovery_password">Recuperar Contraseña</string>
     <string name="tv_register">Regístrate</string>
     <string name="tv_default_untrans" translatable="false">Oli</string>
+
+    <!-- MESNSAJES TOAST  -->
+    <string name="message_done" translatable="false">Ingreso exitoso</string>
+    <string name="text_in_blank" translatable="false">Ingrese sus credenciales</string>
+    <string name="message_incorrect_credentials" translatable="false">usuario y/o clave incorrectos</string>
+    <string name="message_error" translatable="false">Error</string>
+    <string name="register_done" translatable="false">Registro exitoso</string>
+    <string name="register_incorrect" translatable="false">No dejar campos vacios para el registro</string>
+
+    <string name="job_java" translatable="false">JAVA Developer</string>
+    <string name="job_kotlin" translatable="false">KOTLIN Developer</string>
+    <string name="job_sql" translatable="false">DBA SQL</string>
+    <string name="job_aws" translatable="false">AWS Architect"</string>
+
+    <string name="company_alphabet" translatable="false">Alphabet</string>
+    <string name="company_facebook" translatable="false">Facebook</string>
+    <string name="company_ibm" translatable="false">IBM</string>
+    <string name="company_microfost" translatable="false">MICROSOFT</string>
+    <string name="company_apple" translatable="false">APPLE</string>
+    <string name="tvname">Nombre :</string>
+    <string name="btn_activity_for_result">TEST Activity For Result</string>
+    <string name="btn_test_recyclerView">TEST Recycler</string>
+    <string name="operation_cancel">La operación ha sido cancelada</string>
+
+
 </resources>
